@@ -28,3 +28,4 @@
     - fix header navigation to login, register and logout
     - render login page
     - render register page
+10. Add user model

@@ -9,7 +9,7 @@ const app = express();
 
 const PORT = 5000;
 
-mongoose.connect('mongodb://127.0.0.1:27017/petstagram')
+mongoose.connect('mongodb://127.0.0.1:27017/Petstagram')
 .then(() => console.log('DB connected successfully!'))
 .catch(err => console.log('DB error', err.message));
 
