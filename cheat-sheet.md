@@ -29,8 +29,12 @@
     - render login page
     - render register page
 10. Add user model
-11. Add user manager
-    - add login and register methods (empty)
+    - add unique index for username
+    - validate repeate password
+11. Modify login and register forms
+12. Add login and regiser post actions
+13. Add user manager
     - require in user controller
-12. Modify login and register forms
-13. Add login and regiser post actions
+    - add login method
+    - add register method
+14. Implement user manager login and register
