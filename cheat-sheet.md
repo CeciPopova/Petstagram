@@ -27,3 +27,4 @@
     - add controller to routes
     - fix header navigation to login, register and logout
     - render login page
+    - render register page
