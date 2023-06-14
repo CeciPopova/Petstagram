@@ -37,11 +37,11 @@ router.post('/register', async (req, res) => {
         const token = await userManager.register({username, email, password, repeatPassword});
 
         res.cookie(TOKEN_KEY, token);
-        
+
         res.redirect('/');
 
     } catch (err) {
-        res.render('users/register', { error: getErrorMessage(err) });
+        res.render('users/register', { error: getErrorMessage(err), username, email });
     }
   
 });
