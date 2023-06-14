@@ -10,8 +10,10 @@ router.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     const token = await userManager.login(username, password);
+    
+    res.cookie('token', token);
 
-    res.send('Logged in!')
+    res.redirect('/');
 });
 
 router.get('/register', (req, res) => {
@@ -23,7 +25,13 @@ router.post('/register', async (req, res) => {
 
     await userManager.register({username, email, password, repeatPassword});
 
-    res.send('Registered!')
+    res.redirect('/users/login');
+});
+
+router.get('/logout', (req, res) => {
+    res.clearCookie('token');
+
+    res.redirect('/');
 });
 
 module.exports = router;
