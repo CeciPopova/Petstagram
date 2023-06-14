@@ -41,3 +41,5 @@
 14. Hash password
     - install bcrypt
     - hash password
+15. Login
+    - find user by username
