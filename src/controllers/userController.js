@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { TOKEN_KEY} = require('../config/config')
 
 const userManager = require('../managers/userManager');
 
@@ -11,7 +12,7 @@ router.post('/login', async (req, res) => {
 
     const token = await userManager.login(username, password);
     
-    res.cookie('token', token);
+    res.cookie(TOKEN_KEY, token);
 
     res.redirect('/');
 });
@@ -29,7 +30,7 @@ router.post('/register', async (req, res) => {
 });
 
 router.get('/logout', (req, res) => {
-    res.clearCookie('token');
+    res.clearCookie(TOKEN_KEY);
 
     res.redirect('/');
 });
