@@ -6,11 +6,11 @@ const cookieParser = require('cookie-parser');
 
 const routes = require('./routes');
 const { auth } = require('./middlewares/authMiddleware');
-const { errorHandler } = require('./middlewares/errorHandlerMiddleware');
+//const { errorHandler } = require('./middlewares/errorHandlerMiddleware');
 
 const app = express();
 
-const PORT = 5000;
+const PORT = 3000;
 
 mongoose.connect('mongodb://127.0.0.1:27017/Petstagram')
 .then(() => console.log('DB connected successfully!'))
@@ -27,6 +27,6 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(auth);
 app.use(routes);
-app.use(errorHandler);
+//app.use(errorHandler);
 
-app.listen(5000, console.log(`Server is listening on port ${PORT}...`));
+app.listen(PORT, console.log(`Server is listening on port ${PORT}...`));
