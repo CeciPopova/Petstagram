@@ -38,4 +38,6 @@
     - add login method
     - add register method
     - validate if user already exists
-14. Implement user manager login and register
+14. Hash password
+    - install bcrypt
+    - hash password
