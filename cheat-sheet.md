@@ -43,3 +43,20 @@
     - hash password
 15. Login
     - find user by username
+    - validate password with hash
+16. Generate jwt token
+    - install jsonwebtoken
+    - promisify jsonwebtoken
+    - create secret
+    - generate token in manager.login
+17. Return token in cookie
+    - install cookie parser
+    - config cookie parser
+    - set cookie with token
+18. Logout
+19. Authentication middleware
+    - create base middleware
+    - use middleware
+    - implement auth middleware
+    - attach decoded token to request
+    - handle invalid token

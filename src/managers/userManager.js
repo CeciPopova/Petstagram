@@ -2,7 +2,7 @@ const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('../lib/jwt');
 
-const SECRET = 'c461df05-d34d-46d9-950d-6fa2ec41bc6b';
+const { SECRET } = require('../config/config');
 
 exports.login = async (username, password) => {
     const user = await User.findOne({ username });
@@ -22,7 +22,7 @@ exports.login = async (username, password) => {
     }
 
     const token = await jwt.sign(payload, SECRET, { expiresIn: '2d'});
-    
+
     return token;
 };
 
