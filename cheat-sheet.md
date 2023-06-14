@@ -68,4 +68,11 @@
     - add 404 page
     - redirect missing route to 404
     - add global error handler
+    - edd error message extractor
+    - use global error handler after rutes
 23. Show error notifications
+    - add error container to main layout
+    - show error container conditionaly
+    - pass error to render
+    - add local error handler
+24. Login automatically after register
