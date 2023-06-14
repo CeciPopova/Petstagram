@@ -60,3 +60,9 @@
     - implement auth middleware
     - attach decoded token to request
     - handle invalid token
+20. Authorization middleware
+21. Dynamic navigation
+    - add conditional in main layout
+    - add to res locals
+22. Error handling
+    - add global error handler

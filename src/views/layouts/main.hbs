@@ -28,22 +28,13 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="/users/login">
-                                <i>Login</i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/users/register">
-                                <i>Register</i>
-                            </a>
-                        </li>
+                        {{#if isAuthenticated}}
+                        
                         <li class="nav-item">
                             <a href="#">
                                 <i>Add Photo</i>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a href="#">
                                 <i>Profile</i>
@@ -56,6 +47,21 @@
                                 <i>Logout</i>
                             </a>
                         </li>
+                        {{else}}
+
+                         <li class="nav-item">
+                            <a href="/users/login">
+                                <i>Login</i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/users/register">
+                                <i>Register</i>
+                            </a>
+                        </li>
+
+                        {{/if}}
+                      
                     </ul>
                 </div>
             </div>
